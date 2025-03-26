@@ -17,10 +17,10 @@ app = Flask(__name__, static_folder='../../vue/chatcbd/vue-chatcbd/dist')
 CORS(app)  # 启用CORS
 
 db_helper = MySQLHelper(
-    host='weakcbd.top',
-    user='weakcbd',
-    password='ghx02011',
-    database='chatcbd'
+    host='your_host',
+    user='your_user',
+    password='your_password',
+    database='your_database'
 ) # 初始化数据库连接
 
 @app.route('/<path:path>')
@@ -51,11 +51,11 @@ def Chat():
 # 发送邮件函数
 def send_email(receiver_email, code):
     # 发件人信息
-    sender_email = "chatcbd@foxmail.com"  # 替换为你的QQ邮箱
-    sender_name = "chatCBD"  # 发件人名称
-    smtp_server = "smtp.qq.com"  # QQ邮箱的SMTP服务器地址
+    sender_email = ""  # 替换为你的QQ邮箱
+    sender_name = ""  # 发件人名称
+    smtp_server = ""  # QQ邮箱的SMTP服务器地址
     smtp_port = 465  # QQ邮箱的SMTP端口（SSL加密）
-    smtp_password = "yyljngdrdfhfcici"  # 替换为你的QQ邮箱授权码
+    smtp_password = ""  # 替换为你的QQ邮箱授权码
 
     # 邮件内容
     subject = "验证码邮件"
